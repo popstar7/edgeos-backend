@@ -15,7 +15,7 @@ EdgeOS provides a complete solution for managing events (called "popups"), atten
 
 ## Architecture
 
-```
+```typescript
 ┌──────────────────────────────┐  ┌──────────────────────────────┐
 │      Backoffice (React)      │  │      Portal (Next.js)        │
 │     localhost:5173 (dev)     │  │     localhost:3000 (dev)     │
@@ -109,7 +109,7 @@ Login with the default superadmin: `admin@example.com` (check Mailpit for the lo
 
 ### Entity Relationships
 
-```
+```typescript
 Tenant
 ├── Users (backoffice access)
 ├── Humans (end-users)
@@ -141,7 +141,7 @@ All tenant-scoped tables include a `tenant_id` column with RLS policies that ens
 
 ## Project Structure
 
-```
+```typescript
 edgeos-monorepo/
 ├── backend/                 # FastAPI backend
 │   ├── app/
@@ -286,7 +286,7 @@ The portal is a **Next.js 16 App Router** application that serves as the public-
 
 The portal resolves the current tenant from the **subdomain**:
 
-```
+```typescript
 https://event-name.portal.yourdomain.com → tenant slug: "event-name"
 ```
 
@@ -560,3 +560,9 @@ Note: Production compose does NOT include the development services (db, mailpit,
 ## License
 
 See [LICENSE](LICENSE) file for details.
+
+---
+
+## Contributing
+
+Contributions, bug reports, and feature requests are welcome! Feel free to check the [issues page](https://github.com/popstar7/edgeos-backend/issues) or submit a Pull Request.
